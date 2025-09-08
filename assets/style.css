@@ -185,3 +185,90 @@ form .form-control:focus {
   background-color: var(--navy-dark) !important;
   color: var(--text) !important;
 }
+
+
+
+
+/* Desktop hover effect for dropdowns */
+@media (min-width: 992px) { /* lg and up */
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* aligns it neatly */
+    animation: fadeIn 0.2s ease-in-out;
+  }
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.navbar .dropdown-toggle::after {
+  transition: transform 0.2s ease-in-out;
+}
+.navbar .dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+
+
+.img-muted {
+  filter: grayscale(30%) brightness(0.5);
+  transition: filter 0.3s ease;
+}
+.img-muted:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+
+
+/* Dark form controls */
+.form-control-dark,
+.form-control-dark:focus,
+.form-select.form-control-dark {
+  background-color: #122a45;   /* deep navy */
+  color: #eaf2fa;
+  border-color: rgba(255,255,255,.2);
+}
+.form-control-dark::placeholder { color: #9fb2c9; opacity: 1; }
+.form-control-dark:focus {
+  border-color: #1fb6c9;       /* teal accent */
+  box-shadow: 0 0 0 .2rem rgba(31,182,201,.2);
+}
+
+/* Optional: unify the navy panel tone everywhere */
+.bg-navy-dark { background-color: #0b1e33 !important; }
+
+
+.bg-navy-light {
+  background-color: #132a45 !important; /* lighter than #0b1e33 */
+}
+
+
+.veu-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0b1e33; /* navy-dark */
+  color: #fff;
+  border-top: 2px solid #ffc107; /* yellow accent */
+  z-index: 1050; /* sits above other content */
+}
+
+/* Only style text links inside the paragraph */
+.veu-banner p a {
+  color: #0dcaf0;
+  text-decoration: underline;
+}
+.veu-banner p a:hover {
+  color: #0bb8e0;
+}
+
+/* Make sure buttons don’t get underlined */
+.veu-banner .btn {
+  text-decoration: none !important;
+}
+

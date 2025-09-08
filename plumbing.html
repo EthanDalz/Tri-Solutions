@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plumbing Services - TRI Service Solutions</title>
+  <link rel="icon" href="assets/img/tri-service.jpg" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="bg-navy-dark text-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navy-dark sticky-top border-bottom border-secondary">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/tri-service.jpg" alt="Logo" height="50" class="me-2" />
+      <span>TRI Service Solutions</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+            <li><a class="dropdown-item active" href="plumbing.html">Plumbing</a></li>
+            <li><a class="dropdown-item" href="hvac.html">HVAC</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a href="enquire.html" class="nav-link fw-bold ms-lg-3">Enquire Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<section class="hero-header position-relative text-white d-flex align-items-center" style="min-height: 50vh;">
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: url('assets/img/plumbing1.jpg') center/cover no-repeat; z-index: 0;"></div>
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+       style="background: rgba(11,30,51,0.8); z-index: 1;"></div>
+  <div class="container position-relative z-2 text-center">
+    <h1 class="display-4 fw-bold">Professional Plumbing Services</h1>
+    <p class="lead">Reliable, efficient, and discreet solutions for every property</p>
+  </div>
+</section>
+
+<!-- About Plumbing -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-6">
+        <img src="assets/img/plumbing2.jpg" alt="Plumbing team at work" class="img-fluid rounded shadow img-muted">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Trusted Plumbing Experts</h2>
+        <p>At <strong>TRI Service Solutions</strong>, we provide expert plumbing services with a strong commitment to quality, efficiency, and discretion. With years of hands-on experience and a fully licensed team, we deliver dependable solutions for residential, commercial, and industrial plumbing needs.</p>
+        <p>From emergency repairs to complex installations, we handle every project with precision and professionalism — always respecting your time, space, and privacy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="py-5 bg-secondary bg-opacity-10">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Our Plumbing Services</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card bg-dark text-light h-100 border-secondary shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-tools display-4 text-info mb-3"></i>
+            <h5 class="card-title">Emergency Repairs</h5>
+            <p class="card-text">Fast response for urgent plumbing issues and water leaks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-light h-100 border-secondary shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-droplet-half display-4 text-info mb-3"></i>
+            <h5 class="card-title">Leak Detection</h5>
+            <p class="card-text">Advanced detection & pipe repair for lasting solutions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-light h-100 border-secondary shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-house-gear display-4 text-info mb-3"></i>
+            <h5 class="card-title">Bathroom & Kitchen Installations</h5>
+            <p class="card-text">Complete installation services for new homes and renovations.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-light h-100 border-secondary shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-thermometer-snow display-4 text-info mb-3"></i>
+            <h5 class="card-title">Water Heaters</h5>
+            <p class="card-text">Servicing, repair, and installation of hot water systems.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-light h-100 border-secondary shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-trash2 display-4 text-info mb-3"></i>
+            <h5 class="card-title">Drain Cleaning</h5>
+            <p class="card-text">Blocked drain clearing and preventative maintenance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-dark text-light h-100 border-secondary shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-shield-check display-4 text-info mb-3"></i>
+            <h5 class="card-title">Safety Checks</h5>
+            <p class="card-text">Full plumbing safety checks for homes and workplaces.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="py-4" style="background-color: #10273d;">
+  <div class="container text-center text-light px-4">
+    <i class="bi bi-quote display-6 text-info mb-2"></i>
+    <p class="mb-2 small">
+      “TRI Service Solutions fixed our plumbing emergency fast, with zero disruption and complete professionalism.”
+    </p>
+    <footer class="text-muted small"> Sarah J, Melbourne</footer>
+  </div>
+</section>
+
+
+<!-- Call to Action -->
+<section class="text-center py-4 bg-navy-dark border-top border-secondary">
+  <div class="container">
+    <h4 class="fw-bold mb-2">Need Plumbing Help Today?</h4>
+    <p class="mb-3">Contact our licensed experts for reliable, discreet service you can trust.</p>
+    <a href="enquire.html" class="btn btn-primary btn-md">Enquire Now</a>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-navy-dark text-center border-top border-secondary py-3">
+  <div class="container">
+    <p class="mb-0">© <span id="year"></span> TRI Service Solutions Pty Ltd</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

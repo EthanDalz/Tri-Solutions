@@ -11,26 +11,38 @@
 </head>
 <body class="bg-navy-dark text-light">
 
-  <!-- Navbar -->
+ <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-navy-dark sticky-top border-bottom border-secondary">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/tri-service.jpg" alt="TRI Service Solutions Logo" height="50" class="me-2" />
-        <span>TRI Service Solutions</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="enquire.html" class="nav-link btn btn-outline-light ms-lg-3">Enquire Now</a></li>
-        </ul>
-      </div>
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/tri-service.jpg" alt="Logo" height="50" class="me-2" />
+      <span>TRI Service Solutions</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+            <li><a class="dropdown-item" href="plumbing.html">Plumbing</a></li>
+            <li><a class="dropdown-item" href="hvac.html">HVAC</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a href="enquire.html" class="nav-link fw-bold ms-lg-3">Enquire Now</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- About Content -->
 <section class="py-5">

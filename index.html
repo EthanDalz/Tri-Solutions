@@ -25,12 +25,25 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="electrical.html" class="nav-link">Services</a></li>
+
+        <!-- Services dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+            <li><a class="dropdown-item" href="plumbing.html">Plumbing</a></li>
+            <li><a class="dropdown-item" href="hvac.html">HVAC</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item"><a href="enquire.html" class="nav-link fw-bold ms-lg-3">Enquire Now</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- Hero with Background -->
 <section class="hero-header position-relative text-white d-flex align-items-end" style="min-height: 80vh;">
@@ -72,7 +85,7 @@
     <h2 class="text-center mb-5">Our Core Services</h2>
     <div class="row g-4">
       <div class="col-md-4">
-        <a href="services.html#electrical" class="text-decoration-none">
+        <a href="electrical.html" class="text-decoration-none">
           <div class="card bg-navy-dark text-light h-100 shadow card-link">
             <img src="assets/img/electrical.jpg" class="card-img-top" alt="Electrical">
             <div class="tile-cap p-3">
@@ -108,15 +121,18 @@
   </div>
 </section>
 
-<!-- VEU Banner -->
-<section class="py-4 bg-navy-dark border-top border-warning border-3">
-  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-light">
-    <p class="mb-2 mb-md-0">Based in Victoria? You may be eligible for rebates via the 
-      <a href="https://www.energy.vic.gov.au/victorian-energy-upgrades" class="text-info text-decoration-underline fw-semibold" target="_blank">Victorian Energy Upgrades (VEU) Program</a>.
-    </p>
-    <a href="enquire.html" class="btn btn-warning fw-bold">Check Eligibility</a>
-  </div>
-</section>
+
+<!-- Fixed Bottom Banner -->
+<div class="veu-banner d-flex justify-content-between align-items-center px-4 py-2">
+  <p class="mb-0">
+    Based in Victoria? You may be eligible for rebates via the 
+    <a href="https://www.energy.vic.gov.au/for-households/victorian-energy-upgrades" target="_blank">
+      Victorian Energy Upgrades (VEU) Program
+    </a>.
+  </p>
+  <a href="enquire.html" class="btn btn-warning fw-bold">Check Eligibility</a>
+</div>
+
 
 <!-- Footer -->
 <footer class="bg-navy-dark text-center border-top border-secondary py-3">
@@ -131,3 +147,19 @@
 </script>
 </body>
 </html>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(location.search);
+    if (params.get("enquire") === "success") {
+      const banner = document.createElement("div");
+      banner.className = "alert alert-success text-center m-0";
+      banner.textContent = "Enquiry submitted successfully! We’ll be in touch soon.";
+      document.body.prepend(banner);
+      setTimeout(() => banner.remove(), 5000);
+    }
+  });
+</script>
+
