@@ -1,0 +1,187 @@
+:root {
+  --navy: #0b1e33;
+  --navy-dark: #08192b;
+  --teal: #1fb6c9;
+  --orange: #ff8a33;
+  --yellow: #ffd24d;
+  --text: #eaf2fa;
+  --muted: #b8c7d9;
+  --radius: 10px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bg-navy-dark {
+  background-color: var(--navy-dark) !important;
+  color: var(--text) !important;
+}
+
+.card.bg-navy-dark {
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+.banner {
+  background-color: var(--navy-dark) !important;
+}
+
+
+body {
+  background-color: var(--navy);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  padding-bottom: 80px; /* space for banner */
+}
+
+/* ===== Navbar + Logo ===== */
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
+
+/* ===== Buttons (clean + theme) ===== */
+.btn-outline-light {
+  border-width: 2px;
+  font-weight: 700;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: var(--navy-dark);
+}
+
+.btn-outline-warning {
+  border-width: 2px;
+  font-weight: 700;
+}
+
+.btn-outline-warning:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+/* ===== Hero ===== */
+.hero-header {
+  position: relative;
+  background: linear-gradient(180deg, rgba(11, 30, 51, 0.3), rgba(11, 30, 51, 0.85)),
+    url("assets/img/hero.jpg") center/cover no-repeat;
+  min-height: 80vh;
+}
+
+.hero-header .content {
+  position: absolute;
+  bottom: 30px;
+  left: 30px; /* Push from left edge */
+  z-index: 2;
+  max-width: 90%;
+  padding: 30px 20px;
+  background: linear-gradient(to top, rgba(11, 30, 51, 0.95), rgba(11, 30, 51, 0.3));
+  border-radius: var(--radius);
+  text-align: left; /* Important */
+}
+
+
+
+/* Force hero text to pure white */
+.hero-header h1,
+.hero-header p,
+.hero-header .kicker {
+  color: #fff !important;
+}
+
+/* ===== Cards ===== */
+.card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--navy-dark);
+  box-shadow: var(--shadow);
+}
+
+/* ===== Footer ===== */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Banner (Sticky CTA) ===== */
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--navy-dark);
+  border-top: 2px solid var(--orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.banner p {
+  margin: 0;
+  color: #fff;
+  flex: 1;
+}
+
+.banner a {
+  text-decoration: underline;
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* ===== Form Styling ===== */
+form .form-control:focus {
+  box-shadow: 0 0 0 3px var(--teal);
+  border-color: var(--teal);
+}
+
+/* ===== Sidebar Info Card ===== */
+.sidebar {
+  background: var(--navy-dark);
+  padding: 18px;
+  border-radius: var(--radius);
+}
+
+/* ===== Checklist on About Page ===== */
+.list-group-item {
+  font-weight: 500;
+}
+
+/* ===== Responsive Service Tile Cards ===== */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+
+/* ===== Card Hover Effects ===== */
+.card-link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  background-color: var(--navy);
+}
+
+/* ===== Button Hover Fix ===== */
+.btn-warning {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+
+.list-group-item.bg-navy-dark {
+  background-color: var(--navy-dark) !important;
+  color: var(--text) !important;
+}
