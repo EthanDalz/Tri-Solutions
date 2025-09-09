@@ -7,15 +7,6 @@
   <link rel="icon" href="assets/img/tri-service.jpg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/style.css" />
-
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function() {
-      // Replace with your EmailJS Public Key
-      emailjs.init("m3r8Qc-cnQbcp3XZd");
-    })();
-  </script>
 </head>
 <body class="bg-navy-dark text-light">
 
@@ -55,14 +46,22 @@
       <!-- Contact Form -->
       <div class="col-lg-7">
         <h2 class="mb-4">We’re here to assist you with your needs.</h2>
-        <form id="enquireForm" class="bg-navy-light p-4 rounded shadow">
+        <form action="https://formsubmit.co/ethdal@gmail.com" method="POST" class="bg-navy-light p-4 rounded shadow">
+          
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Redirect after submission (absolute URL to skip the intermediate page) -->
+          <input type="hidden" name="_next" value="https://ethandalz.github.io/Tri-Solutions/index.html?enquire=success">
+<!-- Custom subject -->
+          <input type="hidden" name="_subject" value="New Enquiry from TRI Solutions Website">
+
           <div class="mb-3">
             <label for="name" class="form-label">Name *</label>
-            <input type="text" class="form-control form-control-dark" id="name" name="from_name" required />
+            <input type="text" class="form-control form-control-dark" id="name" name="name" required />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email Address *</label>
-            <input type="email" class="form-control form-control-dark" id="email" name="reply_to" required />
+            <input type="email" class="form-control form-control-dark" id="email" name="email" required />
           </div>
           <div class="mb-3">
             <label for="phone" class="form-label">Phone Number *</label>
@@ -105,7 +104,6 @@
             <li>Wednesday: 7:00am – 5:00pm</li>
             <li>Thursday: 7:00am – 5:00pm</li>
             <li>Friday: 7:00am – 5:00pm</li>
-            
           </ul>
         </aside>
       </div>
@@ -123,17 +121,6 @@
 <script>
   // Auto year
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  // EmailJS form submission
-  document.getElementById("enquireForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    emailjs.sendForm("service_kw8pysg", "template_zt4lhbg", this)
-      .then(() => {
-        window.location.href = "index.html?enquire=success";
-      }, () => {
-        alert("There was a problem sending your enquiry. Please try again.");
-      });
-  });
 </script>
 </body>
 </html>
